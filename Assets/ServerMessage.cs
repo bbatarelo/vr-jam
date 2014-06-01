@@ -26,8 +26,8 @@ namespace HutongGames.PlayMaker.Actions
 			t.Elapsed += onTick;
 			t.Start();
 			
-			while (!gotMessage) {
-			}
+//			while (!gotMessage) {
+//			}
 		}
 
 		private void onTick(System.Object source, ElapsedEventArgs e)
