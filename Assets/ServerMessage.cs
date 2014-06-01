@@ -15,6 +15,8 @@ namespace HutongGames.PlayMaker.Actions
 		
 		public override void Reset()
 		{
+			eventsMap = new Dictionary<string, string> ();
+			gotMessage = false;
 		}
 		
 		public override void OnEnter()
