@@ -10,6 +10,7 @@ namespace HutongGames.PlayMaker.Actions
 	{
 		private bool gotMessage = false;
 		private Dictionary<String, String> eventsMap = new Dictionary<string, string> ();
+		Timer timer = new Timer (1000);
 
 		public FsmString PendingEvent;
 		
@@ -17,14 +18,15 @@ namespace HutongGames.PlayMaker.Actions
 		{
 			eventsMap = new Dictionary<string, string> ();
 			gotMessage = false;
+			timer.Stop();
+			timer = new Timer (1000);
 		}
 		
 		public override void OnEnter()
 		{
 			initMap ();
-			var t = new Timer (1000);
-			t.Elapsed += onTick;
-			t.Start();
+			timer.Elapsed += onTick;
+			timer.Start();
 			
 //			while (!gotMessage) {
 //			}
