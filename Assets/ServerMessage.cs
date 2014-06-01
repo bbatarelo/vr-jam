@@ -28,7 +28,7 @@ namespace HutongGames.PlayMaker.Actions
 			}
 		}
 
-		private void onTick(Object source, ElapsedEventArgs e)
+		private void onTick(System.Object source, ElapsedEventArgs e)
 		{
 			((Timer)source).Enabled = false;
 			System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create ("http://vr-jam.herokuapp.com/listen");
